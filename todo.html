@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App | Local Storage</title>
+    <link rel="stylesheet" href="todo-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-clipboard-check"></i> My Tasks</h1>
+                <p>Stay organized and productive</p>
+            </div>
+        </div>
+
+        <!-- INPUT SECTION -->
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="todo-input" 
+                    placeholder="Add a new task... (max 100 characters)"
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="add-btn">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+        </div>
+
+        <!-- STATS SECTION -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon total">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div class="stat-info">
+                    <p class="stat-label">Total Tasks</p>
+                    <p class="stat-number" id="totalCount">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon active">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="stat-info">
+                    <p class="stat-label">Active Tasks</p>
+                    <p class="stat-number" id="activeCount">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon completed">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-info">
+                    <p class="stat-label">Completed Tasks</p>
+                    <p class="stat-number" id="completedCount">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILTER SECTION -->
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-list"></i> All
+            </button>
+            <button class="filter-btn" data-filter="active">
+                <i class="fas fa-circle"></i> Active
+            </button>
+            <button class="filter-btn" data-filter="completed">
+                <i class="fas fa-check"></i> Completed
+            </button>
+        </div>
+
+        <!-- TODOS LIST -->
+        <div class="todos-section">
+            <div id="todoList" class="todo-list"></div>
+        </div>
+
+        <!-- ACTION BUTTONS -->
+        <div class="action-section">
+            <button id="clearCompleted" class="action-btn clear-btn">
+                <i class="fas fa-broom"></i> Clear Completed
+            </button>
+            <button id="deleteAll" class="action-btn delete-btn">
+                <i class="fas fa-trash-alt"></i> Delete All
+            </button>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>✨ All tasks are automatically saved to your browser's local storage</p>
+        </div>
+    </div>
+
+    <script src="todo-script.js"></script>
+</body>
+</html>
