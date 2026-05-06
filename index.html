@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crispy Blast - Premium Fried Chicken & Shawarma | Bangalore</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">🔥 CRISPY <span>BLAST</span></div>
+
+  <nav id="nav" class="nav-menu">
+    <a href="#home">HOME</a>
+    <a href="#featured">MENU</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+  <div class="right">
+    <div class="live-badge">
+      <span class="live-dot"></span> LIVE NOW
+    </div>
+    <a href="tel:9972649017" class="btn">📞 ORDER</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="badge">✨ NOW SERVING IN BANGALORE ✨</p>
+    <h1>CRISPY.<br>JUICY.<br><span>IRRESISTIBLE.</span></h1>
+
+    <p class="desc">
+      Hand-breaded, double-fried, signature-spiced chicken,
+      juicy shawarmas & loaded fries—all under one roof.
+      Fresh ingredients. Bold flavors. Pure crunch!
+    </p>
+
+    <div class="hero-buttons">
+      <a href="https://wa.me/919972649017?text=Hi!%20I%20want%20to%20order" class="btn">
+        <i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP
+      </a>
+      <a href="tel:9972649017" class="btn-outline">📞 CALL NOW</a>
+    </div>
+
+    <!-- LIVE STATS -->
+    <div class="live-stats">
+      <div class="stat">
+        <h3 id="orders-count">247</h3>
+        <p>Orders Today</p>
+      </div>
+      <div class="stat">
+        <h3>⭐ 4.9</h3>
+        <p>Customer Rating</p>
+      </div>
+      <div class="stat">
+        <h3>⚡ 15-25 min</h3>
+        <p>Delivery Time</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE STATUS BANNER -->
+<div class="status-banner">
+  <span class="pulse-dot"></span> LIVE • Open till 11 PM • Fast Delivery Available
+</div>
+
+<!-- CATEGORY STRIP -->
+<div class="strip">
+  <div class="strip-track">
+    <span>🍗 CRISPY CHICKEN</span>
+    <span>🍟 LOADED FRIES</span>
+    <span>🌯 JUMBO SHAWARMA</span>
+    <span>☕ COLD COFFEE</span>
+    <span>🥔 POTATO TWISTER</span>
+    <span>🍗 CRISPY CHICKEN</span>
+    <span>🍟 LOADED FRIES</span>
+    <span>🌯 JUMBO SHAWARMA</span>
+    <span>☕ COLD COFFEE</span>
+    <span>🥔 POTATO TWISTER</span>
+  </div>
+</div>
+
+<!-- FEATURED SECTION -->
+<section class="featured" id="featured">
+  <h2>Featured <span>Cravings</span></h2>
+  <p class="section-subtitle">Hand-crafted with love & premium ingredients</p>
+
+  <div class="cards">
+
+    <div class="card" onclick="openModal(this)">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&h=400&fit=crop" alt="Crispy Chicken">
+        <span class="badge-hot">🔥 HOT</span>
+      </div>
+      <h3>Crispy Chicken</h3>
+      <p class="desc-small">Golden, crunchy, perfectly seasoned</p>
+      <div class="card-footer">
+        <span class="price">₹149</span>
+        <span class="rating">⭐ 4.9/5</span>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd23fda?w=400&h=400&fit=crop" alt="Loaded Fries">
+        <span class="badge-hot">🔥 BEST</span>
+      </div>
+      <h3>Loaded Fries</h3>
+      <p class="desc-small">Crispy fries with cheese & toppings</p>
+      <div class="card-footer">
+        <span class="price">₹179</span>
+        <span class="rating">⭐ 4.8/5</span>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=400&h=400&fit=crop" alt="Jumbo Shawarma">
+        <span class="badge-hot">⚡ SPICY</span>
+      </div>
+      <h3>Jumbo Shawarma</h3>
+      <p class="desc-small">Marinated, grilled, wrapped to perfection</p>
+      <div class="card-footer">
+        <span class="price">₹199</span>
+        <span class="rating">⭐ 4.9/5</span>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop" alt="Cold Coffee">
+        <span class="badge-hot">❄️ CHILL</span>
+      </div>
+      <h3>Cold Coffee</h3>
+      <p class="desc-small">Smooth, creamy, refreshingly delicious</p>
+      <div class="card-footer">
+        <span class="price">₹119</span>
+        <span class="rating">⭐ 4.7/5</span>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1662050519489-9650cf6786d1?w=400&h=400&fit=crop" alt="Popcorn Chicken">
+        <span class="badge-hot">🔥 VIRAL</span>
+      </div>
+      <h3>Popcorn Chicken</h3>
+      <p class="desc-small">Bite-sized, crispy, addictive snacks</p>
+      <div class="card-footer">
+        <span class="price">₹129</span>
+        <span class="rating">⭐ 4.8/5</span>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1585238341710-4ecdf77de88c?w=400&h=400&fit=crop" alt="Potato Twister">
+        <span class="badge-hot">⭐ NEW</span>
+      </div>
+      <h3>Potato Twister</h3>
+      <p class="desc-small">Spiral-cut, fried, & flavored perfection</p>
+      <div class="card-footer">
+        <span class="price">₹119</span>
+        <span class="rating">⭐ 4.6/5</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-us">
+  <h2>Why Choose <span>Crispy Blast?</span></h2>
+  
+  <div class="features-grid">
+    <div class="feature">
+      <div class="feature-icon">🥩</div>
+      <h3>Premium Quality</h3>
+      <p>Hand-selected ingredients, fresh daily. No frozen stock!</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <h3>Lightning Fast</h3>
+      <p>15-25 minutes delivery. Hot food guaranteed!</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">💰</div>
+      <h3>Best Prices</h3>
+      <p>Premium quality at affordable prices. No hidden costs!</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">😋</div>
+      <h3>Bold Flavors</h3>
+      <p>Signature spice blend. Taste the difference!</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <h2>The Crunch <span>Gallery</span></h2>
+  <p class="section-subtitle">Visual proof of our deliciousness</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openImageModal(this)">
+      <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?w=500&h=500&fit=crop" alt="Food Gallery 1">
+      <div class="overlay">
+        <i class="fas fa-expand"></i>
+      </div>
+    </div>
+
+    <div class="gallery-item" onclick="openImageModal(this)">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&h=500&fit=crop" alt="Food Gallery 2">
+      <div class="overlay">
+        <i class="fas fa-expand"></i>
+      </div>
+    </div>
+
+    <div class="gallery-item" onclick="openImageModal(this)">
+      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=500&fit=crop" alt="Food Gallery 3">
+      <div class="overlay">
+        <i class="fas fa-expand"></i>
+      </div>
+    </div>
+
+    <div class="gallery-item" onclick="openImageModal(this)">
+      <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=500&h=500&fit=crop" alt="Food Gallery 4">
+      <div class="overlay">
+        <i class="fas fa-expand"></i>
+      </div>
+    </div>
+
+    <div class="gallery-item" onclick="openImageModal(this)">
+      <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=500&h=500&fit=crop" alt="Food Gallery 5">
+      <div class="overlay">
+        <i class="fas fa-expand"></i>
+      </div>
+    </div>
+
+    <div class="gallery-item" onclick="openImageModal(this)">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=500&h=500&fit=crop" alt="Food Gallery 6">
+      <div class="overlay">
+        <i class="fas fa-expand"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>What Customers <span>Say</span></h2>
+
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Best fried chicken in Bangalore! The crunch is unreal. Ordered 5 times this month!"</p>
+      <h4>- Rahul K.</h4>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Crispy Blast shawarma is a game changer. The flavor and freshness are incredible!"</p>
+      <h4>- Priya M.</h4>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Fast delivery, piping hot food, amazing taste. What more could you ask for?"</p>
+      <h4>- Arun P.</h4>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta" id="contact">
+  <div class="cta-box">
+    <div class="cta-content">
+      <h2>Hungry Now?<br><span>BLAST IT!</span></h2>
+      <p>Fresh, hot, and ready in 15-25 minutes</p>
+    </div>
+
+    <div class="cta-buttons">
+      <a href="https://wa.me/919972649017?text=Hi!%20I%20want%20to%20order" class="whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="tel:9972649017" class="call">
+        <i class="fas fa-phone"></i> Call Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>🔥 CRISPY BLAST</h3>
+      <p>Premium fried chicken & shawarma delivery in Bangalore</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>📍 LOCATION</h3>
+      <p>Bangalore, Karnataka</p>
+      <p>📞 +91 99726 49017</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>🕐 HOURS</h3>
+      <p>11 AM - 11 PM</p>
+      <p>Open Daily</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>🔗 FOLLOW</h3>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Crispy Blast. All rights reserved. Made with ❤️ & 🔥</p>
+  </div>
+</footer>
+
+<!-- CARD MODAL -->
+<div id="cardModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- IMAGE MODAL -->
+<div id="imageModal" class="modal">
+  <div class="modal-image-content">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img id="modalImage" src="" alt="Food Image">
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
